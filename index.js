@@ -21,7 +21,7 @@ app.get("/", (req, res) => {
 
 app.post("/submit", (req, res) => {
   const randomadj = adj[Math.floor(Math.random()*adj.length)];
-  const randomNoun = adj[Math.floor(Math.random()*noun.length)];
+  const randomNoun = noun[Math.floor(Math.random()*noun.length)];
   res.render("index.ejs",{adjective:randomadj,noun:randomNoun});
   //Step 2 - Make the generate name functionality work
   //Hint: When the "Generate Name" button in index.ejs is clicked, it should hit up this route.
